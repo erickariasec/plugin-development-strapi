@@ -1,8 +1,8 @@
 module.exports = [
   {
     method: 'GET',
-    path: '/',
-    handler: 'myController.index',
+    path: '/config',
+    handler: 'test.config',
     config: {
       policies: [],
       auth: false,

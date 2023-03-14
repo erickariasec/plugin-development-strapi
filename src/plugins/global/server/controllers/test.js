@@ -1,9 +1,7 @@
-'use strict';
+"use strict";
 
-/**
- *  controller
- */
-
-const { createCoreController } = require('@strapi/strapi').factories;
-
-module.exports = createCoreController('plugin::global.test');
+module.exports = {
+  config(ctx) {
+    ctx.body = "global";
+  },
+};
