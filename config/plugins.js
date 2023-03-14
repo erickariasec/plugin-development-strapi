@@ -1,5 +1,5 @@
 module.exports = {
-  todo: {
+  global: {
     enabled: true,
     resolve: "./src/plugins/global",
   },
