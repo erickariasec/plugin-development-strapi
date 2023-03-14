@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  config(ctx) {
-    ctx.body = "global";
+  async config(ctx) {
+    ctx.body = await strapi.plugin("global").service("test").config();
   },
 };
