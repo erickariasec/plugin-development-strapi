@@ -1,9 +1,20 @@
-'use strict';
+"use strict";
 
 /**
- *  router
+ *  router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('plugin::global.test');
+module.exports = {
+  type: "admin", // other type available: content-api.
+  routes: [
+    {
+    method: "GET",
+    path: "/config",
+    handler: "test.config",
+    config: {
+      policies: [],
+      auth: false,
+    },
+  },
+  ],
+};
