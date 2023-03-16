@@ -84,6 +84,7 @@ const HomePage = () => {
           id="version"
           name="version"
           onChange={(e) => handleChange(e)}
+          defaultValue={version}
         ></input>
         <label htmlFor="slogan">Slogan</label>
         <input
@@ -91,6 +92,7 @@ const HomePage = () => {
           id="slogan"
           name="slogan"
           onChange={(e) => handleChange(e)}
+          defaultValue={slogan}
         ></input>
         <button type="submit">UPLOAD DATA</button>
       </form>

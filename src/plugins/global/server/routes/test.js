@@ -19,7 +19,7 @@ module.exports = {
     {
       method: "PUT",
       path: "/config",
-      handler: "test.config",
+      handler: "test.updateConfig",
       config: {
         policies: [],
         auth: false,
