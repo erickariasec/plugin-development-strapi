@@ -77,16 +77,18 @@ module.exports = createCoreService("plugin::global.test", ({ strapi }) => ({
         .findOne();
 
       if (!existingConfig) {
-        throw new Error("Config does not exist.");
+        throw new Error("updateConfig(): Config does not exist.");
       }
 
       if (!version || !slogan) {
-        throw new Error("Invalid version or slogan data");
+        throw new Error("updateConfig(): Invalid version or slogan data");
       }
+
+      // await strapi.query("plugin::global.test").update({where: {id: 1}, data: {slogan: "test-cex",},})
 
       const updatedConfig = await strapi
         .query("plugin::global.test")
-        .update({ id: existingConfig.id }, { version, slogan });
+        .update({ where: { id: existingConfig.id }, data: { version, slogan } });
 
       return {
         data: updatedConfig,

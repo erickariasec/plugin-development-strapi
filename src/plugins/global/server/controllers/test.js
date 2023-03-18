@@ -24,7 +24,9 @@ module.exports = createCoreController("plugin::global.test", ({ strapi }) => ({
 
   async updateConfig(ctx) {
     try {
-      const { version, slogan } = ctx.request.body;
+      const { version, slogan } = ctx.request.body.data;
+
+      console.log(ctx.request.body.data);
 
       const updatedConfig = await strapi
         .plugin("global")

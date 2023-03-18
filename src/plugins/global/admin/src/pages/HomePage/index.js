@@ -45,7 +45,7 @@ const HomePage = () => {
   });
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     try {
       const pluginData = {
         data: cexData,
@@ -84,7 +84,7 @@ const HomePage = () => {
           id="version"
           name="version"
           onChange={(e) => handleChange(e)}
-          defaultValue={version}
+          placeholder={version}
         ></input>
         <label htmlFor="slogan">Slogan</label>
         <input
@@ -92,7 +92,7 @@ const HomePage = () => {
           id="slogan"
           name="slogan"
           onChange={(e) => handleChange(e)}
-          defaultValue={slogan}
+          placeholder={slogan}
         ></input>
         <button type="submit">UPLOAD DATA</button>
       </form>
